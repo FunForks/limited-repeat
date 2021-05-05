@@ -11,7 +11,7 @@ nav {
 
 nav a {
   display: inline-block;
-  width: 20%;
+  width: 16%;
   padding: 0.2em;
   border: 0.2em grey outset;
   background-color: lightgray;
@@ -117,7 +117,7 @@ code {
 
 /* STARS */
 #stars h2 {
-  background-color: purple;
+  background-color:#999;
 }
 
 
