@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Limited Repeats</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <h1>Using `background-image` with a fixed number of repeats</h1>
+
+    <nav>
+      <a href="#context">Use cases?</a>
+      <a href="#corners">Photo Corners</a>
+      <a href="#frame">Decorated Frame</a>
+      <!-- a href="#stars">Star Rating</a -->
+      <a href="#notes">CSS Notes</a>
+    </nav>
+
+    <main>
+      <section id="corners">
+        <h2>Photo Corners</h2>
+        <div class="frame">
+          <img src="img/retro.jpg" />
+          <div class="corners"></div>
+        </div>
+
+        <p>Create a div that will act as a frame around two child elements:</p>
+
+        <ul>
+          <li>An <code>img</code> element to contain the photo</li>
+          <li>
+            A <code>div&gt</code>; to hold a photo corner background-image in
+            each corner
+          </li>
+        </ul>
+
+        <p>
+          To get the frame <code>div</code> to shrink-wrap around the
+          <code>img</code>, use <code>display: inline-block</code>. To get the
+          <code>div</code> that holds the corners to fit the frame
+          <code>div</code> exactly, set its <code>width</code> and
+          <code>height</code> to 100% of its parent's dimensions.
+        </p>
+
+        <p>
+          Set the <code>position</code> of the<code>div</code> that holds the
+          corners to <code>absolute</code>, and set its <code>top</code> and
+          <code>left</code> properties to <code>0</code>, so that it fits the
+          parent <code>div</code> exactly.
+        </p>
+
+        <p>
+          Set the <code>position</code> property of the frame
+          <code>div</code> to <code>relative</code>, instead of the default
+          value of <code>static</code>. If you don't the corners will fit into
+          the <code>body</code> element, by default.
+        </p>
+      </section>
+
+      <section id="frame">
+        <h2>Decorated Frame</h2>
+        <div class="frame">
+          <p>Home sweet home!</p>
+        </div>
+
+        <p>
+          Create a square <code>&lt;div&gt;</code> for the frame, and place a
+          <code>&lt;p&gt;</code> element inside it. Use the same
+          <code>background-image</code> four times.
+        </p>
+        <p>
+          Set the <code>background-size</code> of all instances of the
+          <code>background-image</code> a value which represents an integer
+          fraction of the dimensions of the parent <code>&lt;div&gt;</code>. For
+          example: <code>20%</code>, which would make each image be shown 5
+          times along one edge of the frame <code>&lt;div&gt;</code>. (You only
+          need to provide this value once.)
+        </p>
+        <p>
+          Give two of the instances of the <code>background-image</code> a value
+          for <code>background-repeat</code> of <code>repeat-x</code> and give
+          the other two a <code>background-repeat</code> of
+          <code>repeat-y</code>. Set the <code>background-position</code> of
+          each instance of the image to <code>top</code>, <code>right</code>,
+          <code>bottom</code> and <code>left</code>, to match the
+          <code>repeat</code> directions.
+        </p>
+        <p>
+          Centre the text in the <code>&lt;p&gt;</code> element, and give it
+          sufficient <code>padding</code> and an appropriate
+          <code>font-size</code>, so that the text does not overflow into the
+          frame area.
+        </p>
+      </section>
+
+      <!-- section id="stars"></section -->
+
+      <section id="notes">
+        <h2>Notes</h2>
+
+        <p>
+          Please follow the links to read more about the features used to make
+          this web page that you haven't seen before.
+        </p>
+
+        <h3>New HTML Tags</h3>
+
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"
+              >Definition list <code>&lt;dl&gt;</code> tag</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+              >Monospaced inline <code>&lt;code&gt;</code> tag</a
+            >
+          </li>
+        </ul>
+
+        <h3>New CSS Attributes</h3>
+
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
+              ><code>font-weight</code></a
+            >
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"
+              ><code>position</code></a
+            >
+            (<code>absolute</code> and <code>relative</code>)
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/top"
+              ><code>top</code></a
+            >
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left"
+              ><code>left</code></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
+              ><code>text-align</code></a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="context">
+        <h2>Why would you want to do that?</h2>
+        <dl>
+          <dd>Question</dd>
+          <dt>
+            Is it possible to use `background-repeat` to display only a given
+            number of copies of a `background-image`?
+          </dt>
+          <dd>Answers</dd>
+          <dt>No. That's not what `background-repeat` is designed for.</dt>
+          <dt>Why would you want to do that?</dt>
+          <dt>What is your goal?</dt>
+          <dt>
+            <strong>What is your <em>use case</em>?</strong>
+          </dt>
+        </dl>
+
+        <p>
+          This site shows the solution to two possible use cases. (More may be
+          added later.)
+        </p>
+        <ul>
+          <li><a href="#corners">Photo Corners</a></li>
+          <li><a href="#frame">Decorated Frame</a></li>
+          <!--li><a href="#stars">Star Rating</a></li -->
+        </ul>
+
+        <p>
+          Read the description of each case, and do your best to reproduce the
+          same results using your own images and texts. (The solutions are an
+          integral part of this web page.)
+        </p>
+
+        <p>
+          If you think of other use cases, share your ideas on Slack, so we can
+          add them to a future version of this page.
+        </p>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
